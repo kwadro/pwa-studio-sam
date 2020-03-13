@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
-import { shape, string } from 'prop-types';
+import React, {Suspense} from 'react';
+import {shape, string} from 'prop-types';
 
-import { useNavigation } from '@magento/peregrine/lib/talons/Navigation/useNavigation';
+import {useNavigation} from '@magento/peregrine/lib/talons/Navigation/useNavigation';
 
-import { mergeClasses } from '../../classify';
+import {mergeClasses} from '../../classify';
 import AuthBar from '../AuthBar';
 import CategoryTree from '../CategoryTree';
 import LoadingIndicator from '../LoadingIndicator';
@@ -30,7 +30,7 @@ const Navigation = props => {
         showMyAccount,
         showSignIn,
         view
-    } = useNavigation({ customerQuery: GET_CUSTOMER_QUERY });
+    } = useNavigation({customerQuery: GET_CUSTOMER_QUERY});
 
     const classes = mergeClasses(defaultClasses, props.classes);
     const rootClassName = isOpen ? classes.root_open : classes.root;
@@ -41,7 +41,7 @@ const Navigation = props => {
 
     // Lazy load the auth modal because it may not be needed.
     const authModal = hasModal ? (
-        <Suspense fallback={<LoadingIndicator />}>
+        <Suspense fallback={<LoadingIndicator/>}>
             <AuthModal
                 closeDrawer={handleClose}
                 showCreateAccount={showCreateAccount}
@@ -55,7 +55,8 @@ const Navigation = props => {
     ) : null;
 
     return (
-        <aside className={rootClassName}>
+        <aside className={rootClassName} >
+
             <header className={rootHeaderClassName}>
                 <NavHeader
                     isTopLevel={isTopLevel}

@@ -14,7 +14,6 @@ export const useMagentoRoute = () => {
     const isMountedRef = useRef(false);
 
     const routeData = componentMap.get(pathname);
-
     // ask Magento for a RootComponent that matches the current pathname
     useEffect(() => {
         // avoid asking if we already know the answer

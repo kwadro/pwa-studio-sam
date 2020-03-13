@@ -9,6 +9,8 @@ import Main from '../Main';
 import Mask from '../Mask';
 import MiniCart from '../MiniCart';
 import Navigation from '../Navigation';
+import Login from '../Login';
+
 import Routes from '../Routes';
 import { registerMessageHandler } from '../../util/swUtils';
 import { HTML_UPDATE_AVAILABLE } from '../../constants/swMessageTypes';
@@ -135,6 +137,7 @@ const App = props => {
             </Main>
             <Mask isActive={hasOverlay} dismiss={handleCloseDrawer} />
             <Navigation />
+            <Login/>
             <MiniCart />
             <ToastContainer />
         </HeadProvider>

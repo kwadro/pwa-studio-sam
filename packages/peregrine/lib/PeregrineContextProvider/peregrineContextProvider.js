@@ -6,6 +6,7 @@ import CatalogContextProvider from '../context/catalog';
 import CheckoutContextProvider from '../context/checkout';
 import ErrorContextProvider from '../context/unhandledErrors';
 import UserContextProvider from '../context/user';
+import StatContextProvider from '../context/stat';
 
 /**
  * List of essential context providers that are required to run Peregrine
@@ -15,6 +16,7 @@ import UserContextProvider from '../context/user';
 const contextProviders = [
     ErrorContextProvider,
     AppContextProvider,
+    StatContextProvider,
     UserContextProvider,
     CatalogContextProvider,
     CartContextProvider,
@@ -25,6 +27,7 @@ const PeregrineContextProvider = ({ children }) => {
     return contextProviders.reduceRight((memo, ContextProvider) => {
         return <ContextProvider>{memo}</ContextProvider>;
     }, children);
+    
 };
 
 export default PeregrineContextProvider;

@@ -4,7 +4,7 @@ import defaultClasses from './indicator.css';
 import { mergeClasses } from '../../classify';
 import Image from '../Image';
 
-import logo from '../Logo/logo.svg';
+import logo from '../Logo/logo-old.svg';
 
 const LoadingIndicator = props => {
     const classes = mergeClasses(defaultClasses, props.classes);

@@ -1,0 +1,11 @@
+.freepopup{
+    background-color: #ffffff;
+    border: 1px solid #0a0a0a;
+    padding: 10px 30px;
+    min-height: 40px;
+    max-width: 350px;
+    text-align: center;
+    position: absolute;
+    top:40%;
+    left:20%;
+}

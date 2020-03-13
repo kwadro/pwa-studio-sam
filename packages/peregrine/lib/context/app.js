@@ -17,7 +17,6 @@ const AppContextProvider = props => {
         }),
         [actions, asyncActions]
     );
-
     const contextValue = useMemo(() => [appState, appApi], [appApi, appState]);
 
     return (
@@ -33,7 +32,6 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
     asyncActions: bindActionCreators(asyncActions, dispatch)
 });
-
 export default connect(
     mapStateToProps,
     mapDispatchToProps

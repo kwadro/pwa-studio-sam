@@ -160,7 +160,8 @@ export const useProductFullDetail = props => {
         productType
     );
 
-    const [, { toggleDrawer }] = useAppContext();
+    const [, { toggleDrawer,closeSearch }] = useAppContext();
+
     const [{ isAddingItem }, { addItemToCart }] = useCartContext();
 
     const [addConfigurableProductToCart] = useMutation(
@@ -207,6 +208,7 @@ export const useProductFullDetail = props => {
     );
 
     const handleAddToCart = useCallback(async () => {
+
         const payload = {
             item: product,
             productType,
@@ -232,7 +234,10 @@ export const useProductFullDetail = props => {
                 fetchCartDetails,
                 fetchCartId
             });
+
+            closeSearch();
             toggleDrawer('cart');
+            console.log('close search if  active ');
         } else {
             console.error('Unsupported product type. Cannot add to cart.');
         }
@@ -248,7 +253,8 @@ export const useProductFullDetail = props => {
         product,
         productType,
         quantity,
-        toggleDrawer
+        toggleDrawer,
+        closeSearch
     ]);
 
     const handleSelectionChange = useCallback(

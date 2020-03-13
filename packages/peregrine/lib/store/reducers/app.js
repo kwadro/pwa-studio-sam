@@ -10,6 +10,9 @@ const initialState = {
     isOnline: navigator.onLine,
     overlay: false,
     searchOpen: false,
+    loginOpen: false,
+    registerOpen: false,
+    bannerOpen: true,
     query: '',
     pending: {}
 };
@@ -26,6 +29,24 @@ const reducerMap = {
         return {
             ...state,
             searchOpen: !state.searchOpen
+        };
+    },
+    [actions.closeBanner]: state => {
+        return {
+            ...state,
+            bannerOpen: !state.bannerOpen
+        };
+    },
+    [actions.toggleLogin]: state => {
+        return {
+            ...state,
+            loginOpen: !state.loginOpen
+        };
+    },
+    [actions.toggleRegistration]: state => {
+        return {
+            ...state,
+            registrationOpen: !state.registrationOpen
         };
     },
     [actions.executeSearch]: (state, { payload }) => {

@@ -12,14 +12,15 @@
   "scripts": {
     "clean": " "
   },
-  "repository": "github:magento/pwa-studio",
+  "repository": "github:kwadro/pwa-studio-sam",
   "keywords": [
+    "sam",
     "magento",
     "pwa",
     "babel",
     "webpack"
   ],
-  "author": "Magento Commerce",
+  "author": "Magento Commerce and Sam Solution",
   "license": "(OSL-3.0 OR AFL-3.0)",
   "bugs": {
     "url": "https://github.com/magento/pwa-studio/issues"

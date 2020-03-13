@@ -12,13 +12,12 @@ import { useNavigationTrigger } from '@magento/peregrine/lib/talons/Header/useNa
  */
 const NavigationTrigger = props => {
     const { handleOpenNavigation } = useNavigationTrigger();
-
     const classes = mergeClasses(defaultClasses, props.classes);
     return (
         <button
             className={classes.root}
             aria-label="Toggle navigation panel"
-            onClick={handleOpenNavigation}
+            onMouseEnter={handleOpenNavigation}
         >
             <Icon src={MenuIcon} />
         </button>

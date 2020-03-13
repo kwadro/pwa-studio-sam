@@ -20,11 +20,11 @@ const Logo = props => {
 
     return (
         <Image
-            alt="Venia"
+            alt="Yonka"
             classes={{ image: classes.logo }}
             height={height}
             src={logo}
-            title="Venia"
+            title="Yonka"
             width={width}
         />
     );
@@ -49,8 +49,8 @@ Logo.propTypes = {
 };
 
 Logo.defaultProps = {
-    height: 24,
-    width: 48
+    height: 100,
+    width: 189
 };
 
 export default Logo;

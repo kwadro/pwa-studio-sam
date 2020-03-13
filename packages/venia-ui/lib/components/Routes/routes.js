@@ -6,6 +6,8 @@ import MagentoRoute from '../MagentoRoute';
 
 const CartPage = lazy(() => import('../CartPage'));
 const CreateAccountPage = lazy(() => import('../CreateAccountPage'));
+const CreateLoginPage = lazy(() => import('../CreateLoginPage'));
+
 const Search = lazy(() => import('../../RootComponents/Search'));
 
 const Routes = () => {
@@ -17,6 +19,9 @@ const Routes = () => {
                 </Route>
                 <Route exact path="/create-account">
                     <CreateAccountPage />
+                </Route>
+                <Route exact path="/login">
+                    <CreateLoginPage />
                 </Route>
                 <Route exact path="/cart">
                     <CartPage />

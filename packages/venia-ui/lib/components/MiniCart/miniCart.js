@@ -46,7 +46,7 @@ const MiniCart = props => {
     const rootClass = isOpen ? classes.root_open : classes.root;
 
     return (
-        <aside className={rootClass}>
+        <aside className={rootClass} onMouseLeave={handleClose} >
             <Header closeDrawer={handleClose} isEditingItem={isEditingItem} />
             <Body
                 beginEditItem={handleBeginEditItem}

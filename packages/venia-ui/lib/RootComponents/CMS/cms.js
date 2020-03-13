@@ -15,7 +15,7 @@ const CMSPage = props => {
             onServer: false
         }
     });
-
+    console.log(process.env.NODE_ENV)
     if (error) {
         if (process.env.NODE_ENV !== 'production') {
             console.error(error);
